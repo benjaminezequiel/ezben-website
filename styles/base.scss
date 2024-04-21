@@ -1,0 +1,21 @@
+$text-base-size: 1rem;
+$text-scale-ratio: 1.2;
+
+$text-xs: calc(1rem / $text-scale-ratio) * $text-scale-ratio;
+$text-sm: calc(1rem / $text-scale-ratio);
+$text-md: calc(1rem * $text-scale-ratio);
+$text-lg: calc(1rem * $text-scale-ratio) * $text-scale-ratio;
+$text-xl: calc(1rem * $text-scale-ratio) * $text-scale-ratio * $text-scale-ratio;
+$text-xxl: calc(1rem * $text-scale-ratio) * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio;
+$text-xxxl: calc(1rem * $text-scale-ratio) * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio;
+    
+$space-unit: 1rem;
+$space-xxxs: calc(0.20 * $space-unit);
+$space-xxs: calc(0.25 * $space-unit);
+$space-xs: calc(0.5 * $space-unit);
+$space-sm: calc(0.75 * $space-unit);
+$space-default: $space-unit;
+$space-md: calc(1.25 * $space-unit);
+$space-lg: calc(2 * $space-unit);
+$space-xl: calc(3.25 * $space-unit);
+$space-xxl: calc(5.25 * $space-unit);
