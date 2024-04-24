@@ -154,8 +154,8 @@ button {
     background-color: white;
     transition: transform 1s $ease-out;
     border-radius: 999px;
-    height: 10px;
-    width: 10px;
+    height: 20px;
+    width: 20px;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -196,36 +196,36 @@ button {
     }
 }
 .rotating {
--webkit-animation: rotating 24s linear infinite;
--moz-animation: rotating 24s linear infinite;
--ms-animation: rotating 24s linear infinite;
--o-animation: rotating 24s linear infinite;
-animation: rotating 24s linear infinite;
+-webkit-animation: rotating 120s linear infinite;
+-moz-animation: rotating 120s linear infinite;
+-ms-animation: rotating 120s linear infinite;
+-o-animation: rotating 120s linear infinite;
+animation: rotating 120s linear infinite;
 }
 
 .rotating-reverse {
-    -webkit-animation: rotating-reverse 24s linear infinite;
-    -moz-animation: rotating-reverse 24s linear infinite;
-    -ms-animation: rotating-reverse 24s linear infinite;
-    -o-animation: rotating-reverse 24s linear infinite;
-    animation: rotating-reverse 24s linear infinite;
+    -webkit-animation: rotating-reverse 120s linear infinite;
+    -moz-animation: rotating-reverse 120s linear infinite;
+    -ms-animation: rotating-reverse 120s linear infinite;
+    -o-animation: rotating-reverse 120s linear infinite;
+    animation: rotating-reverse 120s linear infinite;
 }
 
     
 .rotating2 {
-    -webkit-animation: rotating 64s linear infinite;
-    -moz-animation: rotating 64s linear infinite;
-    -ms-animation: rotating 64s linear infinite;
-    -o-animation: rotating 64s linear infinite;
-    animation: rotating 64s linear infinite;
+    -webkit-animation: rotating 160s linear infinite;
+    -moz-animation: rotating 160s linear infinite;
+    -ms-animation: rotating 160s linear infinite;
+    -o-animation: rotating 160s linear infinite;
+    animation: rotating 160s linear infinite;
 }
 
 .rotating3 {
-    -webkit-animation: rotating 16s linear infinite;
-    -moz-animation: rotating 16s linear infinite;
-    -ms-animation: rotating 16s linear infinite;
-    -o-animation: rotating 16s linear infinite;
-    animation: rotating 16s linear infinite;
+    -webkit-animation: rotating 180s linear infinite;
+    -moz-animation: rotating 180s linear infinite;
+    -ms-animation: rotating 180s linear infinite;
+    -o-animation: rotating 180s linear infinite;
+    animation: rotating 180s linear infinite;
 }
 
 .circle::before {
@@ -237,7 +237,7 @@ animation: rotating 24s linear infinite;
 }
 
 .circle:hover {
-    transform: scale(4, 4);
+    transform: scale(2, 2);
 }
 
 .hover-img {
@@ -249,7 +249,7 @@ animation: rotating 24s linear infinite;
     border-radius: 4px;
 }
 
-.circle:hover {
+.circle:active {
     .hover-img {
         transition: none;
         z-index: 25;
@@ -257,12 +257,6 @@ animation: rotating 24s linear infinite;
         min-width: 60px;
         height: 2vw;
         position: absolute;
-    }
-}
-
-.circle:hover {
-    .rotating {
-        animation: unset;
     }
 }
 
@@ -277,8 +271,9 @@ animation: rotating 24s linear infinite;
     display: flex;
     position: absolute;
     &:hover {
-        animation: unset;
+        animation-play-state: paused;
     }
+    transform: all 300ms ease;
 }
 
 .circles-container {
