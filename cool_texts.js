@@ -8,7 +8,6 @@ const title_letters = document.getElementById('title_letters');
 
 let title = page_title.innerHTML;
 
-
 for (let i = 0; i < title.length; i++) {
     let letter = document.createElement('span');
     letter.innerHTML = title[i];
@@ -72,64 +71,21 @@ function randomlyMoveTitleLetters() {
     };
 }
 
-var intervalId;
-
 displayWindowSize();
 displayCurrentTime();
 setInterval(displayCurrentTime, 1000);
 
 function displayWindowSize() {
-    let w = window.innerWidth.toString();
-    let h = window.innerHeight.toString();
-    screen_size.innerHTML = w + " x " + h;
+  let w = window.innerWidth.toString();
+  let h = window.innerHeight.toString();
+  screen_size.innerHTML = w + " x " + h;
 
 }
 
 function displayCurrentTime() {
-  var d = new Date();
-  var s = d.getSeconds();
-  var m = d.getMinutes();
-  var h = d.getHours();
-  current_time.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
+var d = new Date();
+var s = d.getSeconds();
+var m = d.getMinutes();
+var h = d.getHours();
+current_time.innerHTML = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
 };
-
-createCircleOfCircles('container',400, 64);
-createCircleOfCircles('container2',450, 80);
-createCircleOfCircles('container3',500, 96);
-
-function createCircleOfCircles(containerName, r, numCircles) {
-    const centerX = 150;
-    const centerY = 150;
-    const container = document.getElementById(containerName);
-    
-    for (let i = 0; i < numCircles; i++) {
-        // Calculate angle for each circle
-        
-        const anglePerCircle = 360 / numCircles;
-        const radiant = anglePerCircle * Math.PI / 180
-        const thisRadiant = (i + 1) * radiant;
-        
-        const circle = document.createElement('div');
-        circle.classList.add('circle')
-
-        const src = 'styles/test-img.png'
-        const img = document.createElement('img')
-        img.src = src
-        img.classList.add('hover-img')
-
-    
-        const x = centerX + r * Math.cos(thisRadiant);
-        const y = centerY + r * Math.sin(thisRadiant);
-        
-        circle.style.left = `${x - 10}px`; // Subtracting half of the width to center it
-        circle.style.top = `${y - 10}px`; // Subtracting half of the height to center it
-        container.appendChild(circle);
-        circle.appendChild(img);
-        // // Create and style the smaller circle
-        // const circle = document.createElement('div');
-        // circle.classList.add('circle');
-    
-        // // Add the smaller circle to the container
-        // container.appendChild(circle);
-    }    
-}
