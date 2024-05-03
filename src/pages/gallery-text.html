@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/gallery.css">
+</head>
+<body>
+  <div class="gallery">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</body>
+
+<script>
+
+const gallery = document.querySelectorAll('.item')
+
+for (let i=0; i < gallery.length; i++) {
+  gallery[i].addEventListener('click', () => {
+    gallery[i].classList.toggle('active')
+  }) 
+  console.log(gallery[i])
+}
+
+</script>
+</html>
